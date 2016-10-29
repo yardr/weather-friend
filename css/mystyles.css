@@ -1,0 +1,113 @@
+@import url(https://fonts.googleapis.com/css?family=Cookie|Lobster+Two|Yanone+Kaffeesatz);
+@import 'https://fonts.googleapis.com/css?family=Droid+Sans';
+* {
+    box-sizing: border-box;
+}
+body {
+    font-size: 100%;
+    margin: 0;
+    padding: 0;
+    background-image: url('../images/background.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+p {
+    font-family: Arial, sans-serif;
+}
+
+/*navigation*/
+#myNavi {
+    background-color: #c2c2a3;
+}
+
+#myNavbar {
+    overflow: hidden;
+    height: 220px;
+}
+
+#brand {
+    color:#000;
+    font-family: 'Lobster Two', cursive;
+    font-size: 1.5em;
+}
+
+#brand:hover {
+    color:#4d88ff;
+    cursor:default;
+    transition: 0.5s;
+}
+
+#finder {
+    position:relative;
+    top:9px;
+    left: 10px;
+}
+
+#cityInput {
+    width: 200px;
+}
+
+/*geolocation data*/
+#weathNow {
+    position: relative;
+    top:60px;
+}
+/*table decoration*/
+#table_wrap {
+    position: relative;
+    width: 250px;
+    height: 180px;
+    margin-left: 40%;
+    margin-top: 10%;
+    background-color: #737373;
+    text-align: center;
+    border-radius: 5px;
+}
+#weath_tab {
+    position: relative;
+    top: 10px;
+    border-collapse: collapse;
+    width: 220px;
+    font-family: 'Droid Sans', sans-serif;
+    margin: auto;
+}
+
+.frow {
+    border-style: solid;
+    border-width: thin;
+    border-left: 1px;
+    border-top: none;
+    border-bottom: none;
+    border-color: #d9d9d9;
+    font-size: 1.2em;
+    font-weight: bold;
+    
+}
+
+#weath_tab th {
+    text-align: center;
+}
+
+#weath_tab td {
+    text-align: center;
+    border-bottom: 1px solid;
+    border-color: #d9d9d9;
+}
+
+#city2 {
+    color: #ff6600;
+}
+
+/*Align the button at the bottom of the parent <div>*/
+#btn_drop {
+    position: absolute;
+    left:0;
+    bottom: 0;
+}
+
+/*Collapsible weathertab for 5 days*/
+#weather_tab {
+    background-color: #737373 ;
+}

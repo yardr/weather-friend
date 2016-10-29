@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>WeatherFriend</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="css/mystyles.css">
+        <link rel="stylesheet" href="css/nulling.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script type="text/javascript" src="scripts/data.js"></script>
+        <script type="text/javascript" src="scripts/current.js"></script>
+        <script type="text/javascript" src="scripts/7days.js"></script>
+        <script type="text/javascript" src="scripts/getbycity.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="scripts/moment-with-locales.js"></script>
+    </head>
+    <body>
+        <nav class="navbar navbar-default navbar-fixed-top" id="myNavi">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+              <span class="glyphicon glyphicon-tasks"></span>
+            </button>
+            <a class="navbar-brand" href="index.html" id="brand">WeatherFriend</a>
+          </div>
+          <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="nav navbar-nav">
+            <li class="active">
+              <a href="#">Home</a>
+            </li>
+            <li>
+              <a href="#">Video of the Day</a>
+            </li>
+            <li>
+              <a href="gallery.html">Weather in pictures</a>
+            </li>
+            <li>
+              <a href="#">Contacts</a>
+            </li>
+            </ul>
+            <ul class="nav navbar-nav" id="finder">
+                <li>
+                <input type="search" class="form-control input-sm" id="cityInput" placeholder="Input the city and press ENTER"/>
+                </li>
+            </ul>
+          </div>
+         </div>
+        </nav>
+        
+        <div class = "text-center" id="weathNow">
+          <ul class="list-unstyled" id="geoWeather">
+            <li id="city" class="btn btn-default"></li>
+            <li id="weatherType" class="btn btn-default"></li>
+            <li id="cTemp" class="btn btn-default"></li>
+            <li id="windSpeed" class="btn btn-default"></li>
+            <li id = "picture"></li>
+          </ul>
+        </div>
+        
+        <div id="table_wrap" class="container">
+        <table id="weath_tab">
+            <tr>
+                <th class="frow" id="city2"></th>
+                <th class="frow" id="cTemp2"></th>
+                <th id="picture2"></th>
+            </tr>
+            <tr>
+                <td colspan="3" id="weatherType2"></td>
+            </tr>
+            <tr>
+                <td colspan="3" id="windSpeed2"></td>
+            </tr>
+            <tr>
+                <td colspan="3" id="pressure2"></td>
+            </tr>
+            <tr>
+                <td colspan="3" id="humidity2"></td>
+            </tr>
+        </table>
+        <!--Collapsible weather table-->
+        <button id="btn_drop" type="button" class="btn btn-primary btn-block" data-toggle="collapse" data-target="#weather_tab">
+          7-Days Weather  <span class="glyphicon glyphicon-chevron-down"></span></button>
+        </div>
+        <div id="weather_tab" class="collapse table-responsive">
+          <table class="table">
+            <tr>
+              <th class="days"></th>
+              <th class="days"></th>
+              <th class="days"></th>
+              <th class="days"></th>
+              <th class="days"></th>
+              <th class="days"></th>
+              <th class="days"></th>
+            </tr>
+            <tr>
+              <td class="icons"></td>
+              <td class="icons"></td>
+              <td class="icons"></td>
+              <td class="icons"></td>
+              <td class="icons"></td>
+              <td class="icons"></td>
+              <td class="icons"></td>
+            </tr>
+            <tr>
+              <td class="temps"></td>
+              <td class="temps"></td>
+              <td class="temps"></td>
+              <td class="temps"></td>
+              <td class="temps"></td>
+              <td class="temps"></td>
+              <td class="temps"></td>
+            </tr>
+            <tr>
+              <td class="wind"></td>
+              <td class="wind"></td>
+              <td class="wind"></td>
+              <td class="wind"></td>
+              <td class="wind"></td>
+              <td class="wind"></td>
+              <td class="wind"></td>
+            </tr>
+            <tr>
+              <td class="moist"></td>
+              <td class="moist"></td>
+              <td class="moist"></td>
+              <td class="moist"></td>
+              <td class="moist"></td>
+              <td class="moist"></td>
+              <td class="moist"></td>
+            </tr>
+            
+          </table>
+        </div>
+    </body>
+</html>
