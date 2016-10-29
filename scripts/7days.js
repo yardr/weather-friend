@@ -16,7 +16,7 @@ if(e.which == 13) {
             );
          });
 	}
-	function addWeather(icon, day, temp, speed, humidity) {
+	function addWeather(icon, day, temp, speed, humidity, count) {
         $('.days').html(day);
         $('.icons').html('<img src="images/'+ icon +'.png"/>');
         $('.temps').html(temp);
