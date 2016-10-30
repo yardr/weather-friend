@@ -5,6 +5,7 @@ if(e.which == 13) {
 	function dataReceived(data) {
     	 var offset = (new Date()).getTimezoneOffset()*60*1000;
     	 var city = data.city.name;
+    	 var i = 1;
     $.each(data.list, function() {
         var localTime = new Date(this.dt*1000 - offset);
         addWeather(
@@ -12,16 +13,18 @@ if(e.which == 13) {
             moment(localTime).calendar(), // Use moment.js for date format
             Math.round(this.temp.day) + '&deg;C',
             this.speed + ' m/s',
-            this.humidity
+            this.humidity,
+            i
             );
+            i++;
          });
 	}
 	function addWeather(icon, day, temp, speed, humidity, count) {
-        $('.days').html(day);
-        $('.icons').html('<img src="images/'+ icon +'.png"/>');
-        $('.temps').html(temp);
-        $('.wind').html(speed);
-        $('.moist').html(humidity);
+        $('#day' + count).html(day);
+        $('#icon' + count).html('<img src="images/'+ icon +'.png"/>');
+        $('#temp' + count).html(temp);
+        $('#wind' + count).html(speed);
+        $('#moist' + count).html(humidity);
     }
     
     function showError(msg){
