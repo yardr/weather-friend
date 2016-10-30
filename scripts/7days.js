@@ -13,7 +13,7 @@ if(e.which == 13) {
             moment(localTime).calendar(), // Use moment.js for date format
             Math.round(this.temp.day) + '&deg;C',
             this.speed + ' m/s',
-            this.humidity,
+            this.humidity + ' %',
             i
             );
             i++;
