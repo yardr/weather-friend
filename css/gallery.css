@@ -2,9 +2,12 @@
 * {
     box-sizing: border-box;
 }
+html {
+    position: relative;
+    min-height: 100%;
+}
 
 body {
-    margin: 0;
     padding: 0;
     background-image: url('../images/background.jpg');
     background-size: cover;
@@ -12,6 +15,9 @@ body {
     background-attachment: fixed;
 }
 
+body {
+    margin-bottom: 60px;
+}
 p {
     font-family: Arial, sans-serif;
 }
@@ -40,4 +46,35 @@ p {
 
 #myNavi {
     background-color: #c2c2a3;
+}
+
+/*footer styles*/
+footer {
+    position: absolute;
+    bottom:0;
+    height: 60px;
+    width: 100%;
+    font-family: 'Droid Sans', sans-serif;
+    background-color: #b8b894;
+    color: #1f1f14;
+}
+
+footer span {
+    position: absolute;
+    top: 15px;
+}
+
+#facebook {
+    position: relative;
+    top: 6px;
+}
+#facebook img {
+    width: 40px;
+    height: 40px;
+}
+
+#facebook img:hover {
+    -webkit-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+    transition: 1.5s;
 }
