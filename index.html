@@ -7,16 +7,32 @@
         <link rel="stylesheet" type="text/css" href="css/mystyles.css">
         <link rel="stylesheet" href="css/nulling.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-        
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-        <script type="text/javascript" src="scripts/data.js"></script>
-        <script type="text/javascript" src="scripts/current.js"></script>
-        <script type="text/javascript" src="scripts/7days.js"></script>
-        <script type="text/javascript" src="scripts/getbycity.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-        <script type="text/javascript" src="scripts/moment-with-locales.js"></script>
+        <link rel="stylesheet" type="text/css" href="css/blincurs.css">
     </head>
     <body>
+      <SCRIPT LANGUAGE=JavaScript>
+ <!--  
+   if (navigator.appVersion.lastIndexOf('Win') != -1) {
+       dropline = "\r\n"  } else { dropline = "\n" }
+ function coffeemsg(form) {
+ document.ccform.Message.value = (
+    '  ' + dropline + dropline
+   + '-----CoffeeCup AutoMated E-Mail Form---START----- ' + dropline
+   + dropline + dropline 
+   + 'Name     : ' + document.ccform.name.value + dropline
+   + 'E-mail    : ' + document.ccform.email.value + dropline
+   + 'Message: ' + document.ccform.message.value
+   + dropline  + dropline
+   + '-----CoffeeCup AutoMated E-Mail Form----END------ ' + dropline
+   + dropline + 'E-Mail Form JavaScript by:' + dropline
+   + 'http://www.coffeecup.com' + dropline
+   + dropline + dropline 
+   + ' FIELD VALUES: ' + dropline
+   + '  ' + dropline
+ );
+ }
+ // -->
+ </SCRIPT>
         <nav class="navbar navbar-default navbar-fixed-top" id="myNavi">
         <div class="container-fluid">
           <div class="navbar-header">
@@ -37,7 +53,7 @@
               <a href="gallery.html">Weather in pictures</a>
             </li>
             <li>
-              <a href="#">Contacts</a>
+              <a href="#" id="myBtn">Contacts</a>
             </li>
             </ul>
             <ul class="nav navbar-nav" id="finder">
@@ -48,7 +64,7 @@
           </div>
          </div>
         </nav>
-        
+        <!--geo weather container-->
         <div class = "text-center" id="weathNow">
           <ul class="list-unstyled" id="geoWeather">
             <li id="city" class="btn btn-default"></li>
@@ -59,6 +75,7 @@
           </ul>
         </div>
         
+        <!--container with the current data-->
         <div id="table_wrap" class="container">
         <table id="weath_tab">
             <tr>
@@ -79,6 +96,7 @@
                 <td colspan="3" id="humidity2"></td>
             </tr>
         </table>
+        
         <!--Collapsible weather table-->
         <button id="btn_drop" type="button" class="btn btn-primary btn-block" data-toggle="collapse" data-target="#weather_tab">
           7-Days Weather  <span class="glyphicon glyphicon-chevron-down"></span></button>
@@ -133,5 +151,47 @@
             
           </table>
         </div>
+        
+        <!--contact form-->
+        <div class="modal fade" id="myModal" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header" style="padding: 20px 50px;">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4><span class="element"></span></h4>
+                    </div>
+                    <div class="modal-body" style="padding:40px 50px;">
+                        <form role="form" name="ccform" method="post" action="mailto: webtraveller22@gmail.com?subject=Message" enctype="text/plain">
+                        <INPUT type=hidden name="Message">
+                            <div class="form-group">
+                                <label for="name">Name *</label>
+                                <input type="text" class="form-control" id="usrname" name="name" onChange="coffeemsg()" placeholder="Enter your name">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email *</label>
+                                <input type="email" class="form-control" id="email" name="email" onChange="coffeemsg()" placeholder="Here will be your email">
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Your Message/Advice</label>
+                                <textarea class="form-control" rows="5" id="message" name="message" onChange="coffeemsg()"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-block pull-left" data-dismiss="modal" onClick="coffeemsg()">
+                                <span class="glyphicon glyphicon-envelope"></span> Send</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script type="text/javascript" src="scripts/data.js"></script>
+        <script type="text/javascript" src="scripts/current.js"></script>
+        <script type="text/javascript" src="scripts/7days.js"></script>
+        <script type="text/javascript" src="scripts/getbycity.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="scripts/moment-with-locales.js"></script>
+        
+        <script type="text/javascript" src="scripts/typed.js"></script>
+        <script type="text/javascript" src="scripts/index.js"></script>
     </body>
 </html>

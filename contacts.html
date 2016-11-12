@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>WeatherFriend</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="UTF-8">
+        <link rel="stylesheet" href="css/nulling.css">
+        <link rel="stylesheet" type="text/css" href="css/blincurs.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="scripts/typed.js"></script>
+        <script type="text/javascript" src="scripts/index.js"></script>
+    </head>
+    <body>
+        <button type="button" class="btn btn-default btn-lg" id="myBtn">Test Modal</button>
+        <div class="modal fade" id="myModal" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header" style="padding: 20px 50px;">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4><span class="element"></span></h4>
+                    </div>
+                    <div class="modal-body" style="padding:40px 50px;">
+                        <form role="form">
+                            <div class="form-group">
+                                <label for="name">Name *</label>
+                                <input type="text" class="form-control" id="usrname" placeholder="Enter your name">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email *</label>
+                                <input type="email" class="form-control" id="email" placeholder="Here will be your email">
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Your Message/Advice</label>
+                                <textarea class="form-control" rows="5" id="message"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-block pull-left" data-dismiss="modal">
+                                <span class="glyphicon glyphicon-envelope"></span> Send</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </body>
+</html>
