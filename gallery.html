@@ -10,13 +10,19 @@
         <script type="text/javascript" src="scripts/typed.js"></script>
         <script type="text/javascript" src="scripts/form.js"></script>
         
-        <link href="css/gallery.css" rel="stylesheet">
+        <link rel="stylesheet" href="css/gallery.css">
+        <link rel="stylesheet" href="css/nulling.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <!-- Add gallery.css later-->
         
         <title>WeatherFriend</title>
     </head>
     <body>
+      <!--<div id="wrap">
+        <div id="main" class="container clear-top">
+          
+        </div>
+      </div>-->
       <nav class="navbar navbar-default navbar-fixed-top" id="myNavi">
         <div class="container-fluid">
           <div class="navbar-header">
@@ -56,6 +62,38 @@
             <div id="modal-container">
             </div>
         </div>
+        <div class="modal fade" id="myModal" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header" style="padding: 20px 50px;">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4><span class="element"></span></h4>
+                    </div>
+                    <div class="modal-body" style="padding:40px 50px;">
+                        <form role="form">
+                            <div class="form-group">
+                                <label for="name">Name *</label>
+                                <input type="text" class="form-control" name="userName" id="userName" placeholder="Enter your name...">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email *</label>
+                                <input type="email" name="email" class="form-control" id="email" placeholder="Here will be your email...">
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Your Message/Advice</label>
+                                <textarea class="form-control" rows="5" name="message" id="message"></textarea>
+                            </div>
+                            <button type="submit" id="send" class="btn btn-primary btn-block pull-left">
+                                <span class="glyphicon glyphicon-envelope"></span> Send</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class="container-fluid text-center">
+          <span>D e s i g n e d by Yaroslav Drahan</span>
+          <a id="facebook" class="pull-right" href="https://www.facebook.com/ydrahan1" target="_blank"><img src="images/facebook.png" alt="facebook link"></a>
+        </footer>
             
             <!-- template which will display many images from the album-->
             
@@ -92,39 +130,7 @@
             </div>
           </div>
         </script>
-        <!--<footer class="container-fluid text-center">
-          <span>D e s i g n e d by Yaroslav Drahan</span>
-          <a id="facebook" class="pull-right" href="https://www.facebook.com/ydrahan1" target="_blank"><img src="images/facebook.png" alt="facebook link"></a>
-        </footer>-->
         
-        <div class="modal fade" id="myModal" role="dialog">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header" style="padding: 20px 50px;">
-                        <button type="button" class="close" data-dismiss="modal">&times;</button>
-                        <h4><span class="element"></span></h4>
-                    </div>
-                    <div class="modal-body" style="padding:40px 50px;">
-                        <form role="form">
-                            <div class="form-group">
-                                <label for="name">Name *</label>
-                                <input type="text" class="form-control" name="userName" id="userName" placeholder="Enter your name...">
-                            </div>
-                            <div class="form-group">
-                                <label for="email">Email *</label>
-                                <input type="email" name="email" class="form-control" id="email" placeholder="Here will be your email...">
-                            </div>
-                            <div class="form-group">
-                                <label for="message">Your Message/Advice</label>
-                                <textarea class="form-control" rows="5" name="message" id="message"></textarea>
-                            </div>
-                            <button type="submit" id="send" class="btn btn-primary btn-block pull-left">
-                                <span class="glyphicon glyphicon-envelope"></span> Send</button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
     </body>
     
     <script type="text/javascript">
