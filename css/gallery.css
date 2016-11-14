@@ -44,11 +44,6 @@ p {
     max-height: 150px;
 }
 
-#gallery {
-    position: relative;
-    top: 70px;
-}
-
 #myNavi {
     background-color: #c2c2a3;
 }
