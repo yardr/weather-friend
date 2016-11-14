@@ -171,3 +171,9 @@ footer span {
     transform: rotateY(180deg);
     transition: 1.5s;
 }
+
+/*form styles*/
+.modal-header, h4, .close {
+    background-color: #3366ff;
+    color: white;
+}
