@@ -2,9 +2,8 @@
 * {
     box-sizing: border-box;
 }
-html {
-    position: relative;
-    min-height: 100%;
+html, body {
+    height: 100%;
 }
 
 body {
@@ -15,9 +14,15 @@ body {
     background-attachment: fixed;
 }
 
-body {
-    margin-bottom: 60px;
+#wrap {
+  min-height: 100%;
 }
+
+#main {
+  overflow:auto;
+  padding-bottom:60px; /* this needs to be bigger than footer height*/
+}
+
 p {
     font-family: Arial, sans-serif;
 }
@@ -49,15 +54,16 @@ p {
 }
 
 /*footer styles*/
-footer {
-    position: absolute;
-    bottom:0;
-    height: 60px;
-    width: 100%;
-    font-family: 'Droid Sans', sans-serif;
-    background-color: #b8b894;
-    color: #1f1f14;
-}
+.footer {
+  position: relative;
+  margin-top: -60px; /* negative value of footer height */
+  height: 60px;
+  clear:both;
+  padding-top:20px;
+  font-family: 'Droid Sans', sans-serif;
+  background-color: #b8b894;
+  color: #1f1f14;
+} 
 
 footer span {
     position: absolute;
