@@ -62,12 +62,12 @@ p {
 
 footer span {
     position: absolute;
-    top: 15px;
 }
 
 #facebook {
     position: relative;
-    top: 6px;
+    top: -7px;
+    right: 10px;
 }
 #facebook img {
     width: 40px;
