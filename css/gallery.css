@@ -19,7 +19,7 @@ body {
 }
 
 #main {
-  overflow:auto;
+  overflow: hidden;
   padding-bottom:60px; /* this needs to be bigger than footer height*/
 }
 
