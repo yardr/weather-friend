@@ -14,12 +14,16 @@ body {
     background-attachment: fixed;
 }
 
+body {
+    overflow: hidden;
+}
+
 #wrap {
   min-height: 100%;
 }
 
 #main {
-  overflow:hidden;
+  overflow:auto;
   padding-bottom:60px; /* this needs to be bigger than footer height*/
 }
 
