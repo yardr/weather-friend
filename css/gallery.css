@@ -14,10 +14,6 @@ body {
     background-attachment: fixed;
 }
 
-body {
-    overflow: hidden;
-}
-
 #wrap {
   min-height: 100%;
 }
